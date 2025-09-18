@@ -1,0 +1,9 @@
+{
+  "DATA_DIR": "/data",
+  "PUBLIC_ALLOWED_TYPES": [
+    "rubrics",
+    "course_info",
+    "cap"
+  ],
+  "MAX_UPLOAD_MB": 100
+}

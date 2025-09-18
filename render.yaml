@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: uitm-filing-statistik
+    env: python
+    plan: starter
+    region: singapore
+    autoDeploy: true
+
+    buildCommand: pip install -r requirements.txt
+    startCommand: streamlit run app.py --server.port $PORT --server.address 0.0.0.0
+
+    envVars:
+      - key: DATA_DIR
+        value: /data
+
+    disk:
+      name: data
+      mountPath: /data
+      sizeGB: 10
+
+    healthCheckPath: /
